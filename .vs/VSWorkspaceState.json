@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\components",
+    "\\components\\Footer",
+    "\\components\\Header",
+    "\\pages",
+    "\\styles"
   ],
-  "SelectedNode": "\\C:\\Users\\Muneeb\\Source\\Repos\\portfolio-elfa",
+  "SelectedNode": "\\components\\Footer\\index.js",
   "PreviewInSolutionExplorer": false
 }
