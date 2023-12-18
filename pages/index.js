@@ -16,8 +16,8 @@ import data from "../data/portfolio.json";
 
 export default function Home() {
   // Ref
-    const workRef = useRef();
-    const servicesRef = useRef();
+  const workRef = useRef();
+  const servicesRef = useRef();
   const aboutRef = useRef();
   const textOne = useRef();
   const textTwo = useRef();
@@ -26,8 +26,8 @@ export default function Home() {
 
   // Handling Scroll
   const handleWorkScroll = () => {
-      window.scrollTo({
-          top: servicesRef.current.offsetTop,
+    window.scrollTo({
+      top: servicesRef.current.offsetTop,
       left: 0,
       behavior: "smooth",
     });
@@ -59,7 +59,7 @@ export default function Home() {
       <div className="gradient-circle"></div>
       <div className="gradient-circle-bottom"></div>
 
-      <div className="mx-auto mb-10">
+      <div className="mx-auto mb-10" style={{ width: "90%" }}>
         <Header
           handleWorkScroll={handleWorkScroll}
           handleAboutScroll={handleAboutScroll}
@@ -94,7 +94,7 @@ export default function Home() {
 
           <Socials className="mt-2 laptop:mt-5" />
         </div>
-              {/*       <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
+        {/*       <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
           <h1 className="text-2xl text-bold">Work.</h1>
 
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
@@ -110,9 +110,9 @@ export default function Home() {
           </div>
         </div>
 */}
-              <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={servicesRef}>
-          <h1 className="tablet:m-10 text-2xl text-bold">Services.</h1>
-          <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
+        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={servicesRef}>
+          <h1 className="text-2xl text-bold ml-2">Services.</h1>
+          <div className="mt-5 grid grid-cols-1 laptop:grid-cols-2 gap-6">
             {data.services.map((service, index) => (
               <ServiceCard
                 key={index}
@@ -131,8 +131,8 @@ export default function Home() {
           </div>
         )}
         <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
-          <h1 className="tablet:m-10 text-2xl text-bold">About.</h1>
-          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
+          <h1 className="text-2xl text-bold">About.</h1>
+          <p className="mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
             {data.aboutpara}
           </p>
         </div>
