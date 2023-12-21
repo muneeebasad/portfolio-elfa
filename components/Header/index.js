@@ -17,6 +17,10 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleContactScroll, isBl
     setMounted(true);
   }, []);
 
+  const redirectToZohoMail = () => {
+    window.open("https://mail.zoho.com/", "_blank");
+  };
+
   return (
     <>
       <Popover className="block tablet:hidden mt-5">
@@ -77,7 +81,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleContactScroll, isBl
                   {showResume && (
                     <Button
                       onClick={() =>
-                        window.open("contact@elfatechnologies.com")
+                        window.open("contact@elfainfotech.com")
                       }
                     >
                       Resume
@@ -104,7 +108,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleContactScroll, isBl
                   )}
 
                   <Button
-                    onClick={() => window.open("contact@elfatechnologies.com")}
+                    onClick={() => window.open("contact@elfainfotech.com")}
                   >
                     Contact
                   </Button>
@@ -142,6 +146,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleContactScroll, isBl
             )}
 
             <Button onClick={handleContactScroll}>Contact</Button>
+            <Button onClick={redirectToZohoMail}>Check Mail</Button>
             {mounted && theme && data.darkMode && (
               <Button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -168,11 +173,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleContactScroll, isBl
               </Button>
             )}
 
-            <Button
-              onClick={() => window.open("mailto:contact@elfatechnologies.com")}
-            >
-              Contact
-            </Button>
+            <Button onClick={handleContactScroll}>Contact</Button>
+            <Button onClick={redirectToZohoMail}>Zoho Mail</Button>
 
             {mounted && theme && data.darkMode && (
               <Button

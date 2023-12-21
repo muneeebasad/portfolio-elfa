@@ -120,7 +120,7 @@ export default function Home() {
           </div>
         </div>
 */}
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={servicesRef}>
+        <div className="mt-5 laptop:mt-30 p-2 laptop:p-0" ref={servicesRef}>
           <h1 className="text-2xl text-bold ml-2">Services.</h1>
           <div className="mt-5 grid grid-cols-1 laptop:grid-cols-2 gap-6">
             {data.services.map((service, index) => (
@@ -141,8 +141,9 @@ export default function Home() {
           </div>
         )}
         <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
-          <h1 className="text-2xl text-bold">About.</h1>
-          <p className="mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
+          <h1 className="text-3xl text-bold">About.</h1>
+          <p className="mt-2 ml-2 text-xl laptop:text-2xl w-full laptop:w-3/5"
+          style={{ textAlign: "Justify", textJustify: "auto" }}>
             {data.aboutpara}
           </p>
         </div>

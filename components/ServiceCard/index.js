@@ -17,7 +17,7 @@ const ServiceCard = ({ name, description }) => {
       <h1 className="text-3xl">{name ? name : "Heading"}</h1>
       <p
         className="mt-5 opacity-40 text-xl"
-        style={{ textAlign: "justify", textJustify: "inter-word" }}
+        style={{ textAlign: "Justify", textJustify: "auto" }}
       >
         {description
           ? description
